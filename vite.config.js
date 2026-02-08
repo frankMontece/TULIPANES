@@ -9,7 +9,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'terser',
+    // Use esbuild for minification on Vercel (no extra dependency required)
+    minify: 'esbuild',
     target: 'esnext',
     rollupOptions: {
       output: {
