@@ -44,15 +44,10 @@
       ]
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(?!.*\\..*$|.*/$).*",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "status": 200,
-      "dest": "/$1"
+      "source": "/(?!.*\\..*$|.*/$).*",
+      "destination": "/index.html"
     }
   ],
   "env": {
