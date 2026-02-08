@@ -1,0 +1,27 @@
+# Git
+.git
+.gitignore
+
+# Documentación
+*.md
+GUIA_*.md
+README.md
+CHECKLIST_*.md
+CAMBIOS_*.md
+ESTRUCTURA_*.md
+IMPLEMENTACION_*.md
+RESUMEN_*.md
+QUICK_*.md
+
+# IDEs
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# Sistemas
+.DS_Store
+Thumbs.db
+
+# Archivos de instrucciones
+INSTRUCCIONES.txt
