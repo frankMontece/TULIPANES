@@ -8,16 +8,13 @@
 }
 
 :root {
-    /* Paleta de colores Verde Oliva Elegante */
-    --color-primario: #6b8e23;          /* Verde Oliva Base */
-    --color-primario-claro: #8fbc8f;    /* Verde Claro (acentos) */
-    --color-secundario: #a4ac86;        /* Verde Grisáceo (complementario) */
-    --color-acento: #9acd32;            /* Verde Amarillento (detalles) */
-    --color-fondo: #f5f5f0;             /* Blanco Humo (muy sutil) */
-    --color-fondo-oscuro: #e8e8e0;      /* Gris claro para contraste */
-    --color-texto: #3a3a3a;             /* Gris oscuro (legibilidad) */
-    --color-blanco: #ffffff;             /* Blanco puro */
-    --sombra-suave: 0 10px 30px rgba(107, 142, 35, 0.15);  /* Sombra verde oliva */
+    /* Paleta de colores romántica */
+    --color-primario: #ff6b9d;
+    --color-secundario: #ffc2d1;
+    --color-fondo: #fff5f7;
+    --color-texto: #2c2c2c;
+    --color-blanco: #ffffff;
+    --sombra-suave: 0 10px 30px rgba(255, 107, 157, 0.2);
     
     /* Tipografía */
     --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,12 +22,10 @@
 
 body {
     font-family: var(--fuente-principal);
-    background: linear-gradient(135deg, #e8e8dc 0%, #f0f0e8 100%);
-    color: var(--color-texto);
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(135deg, #ffeef3 0%, #ffe4ec 100%);
     min-height: 100vh;
     overflow-x: hidden;
+    color: var(--color-texto);
 }
 
 /* ========================================
@@ -132,13 +127,13 @@ body {
 .container-mensaje {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     position: relative;
     z-index: 10;
-    padding: 1rem;
-    gap: 2rem;
 }
 
 /* Contenedor del mensaje */
@@ -150,11 +145,10 @@ body {
     border-radius: 20px;
     max-width: 700px;
     width: 100%;
-    margin: 2rem auto;
+    margin: 0 2rem;
     box-shadow: var(--sombra-suave);
     backdrop-filter: blur(10px);
     animation: aparecer 1s ease-out;
-    border: 2px solid var(--color-primario-claro);
 }
 
 @keyframes aparecer {
@@ -310,8 +304,6 @@ body {
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
-
-/* Tablets (768px y menores) */
 @media (max-width: 768px) {
     .imagen-clickeable img {
         width: 250px;
@@ -320,166 +312,66 @@ body {
 
     .titulo-mensaje {
         font-size: 1.8rem;
-        margin-bottom: 1.5rem;
     }
 
     .texto-mensaje p {
         font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 1rem;
     }
 
     .mensaje-amor {
         padding: 2rem 1.5rem;
-        margin: 1rem auto;
+        margin: 0 1rem;
         width: calc(100% - 2rem);
-        max-width: none;
     }
 
     .tulipan {
         font-size: 2rem;
     }
-
-    .container-inicio {
-        gap: 1.5rem;
-        padding: 1rem;
-    }
 }
 
-/* Móviles grandes (480px a 767px) */
-@media (max-width: 767px) {
-    .imagen-clickeable img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .container-mensaje {
-        min-height: auto;
-        padding: 0.5rem;
-        justify-content: flex-start;
-        padding-top: 1rem;
-    }
-
-    .mensaje-amor {
-        padding: 1.5rem 1rem;
-        margin: 1rem 0.5rem;
-        width: calc(100% - 1rem);
-        max-width: none;
-        border-radius: 15px;
-        min-height: auto;
-        max-height: none;
-    }
-
-    .titulo-mensaje {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-    }
-
-    .texto-mensaje p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-bottom: 0.8rem;
-        text-align: left;
-    }
-
-    .firma {
-        font-size: 1rem;
-        margin-top: 1.5rem;
-    }
-
-    .texto-indicacion {
-        font-size: 1rem;
-    }
-
-    .tulipan {
-        font-size: 1.5rem;
-        opacity: 0.6;
-    }
-
-    .container-inicio {
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .pulse-effect {
-        border: 2px solid var(--color-primario);
-    }
-}
-
-/* Móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
-    html, body {
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .frame {
-        height: auto;
-        min-height: 100vh;
-        position: relative;
-    }
-
     .container-inicio {
         min-height: 100vh;
-        padding: 2rem 1rem;
-        justify-content: center;
         gap: 1.5rem;
+        padding: 1rem;
     }
 
     .imagen-clickeable img {
         width: 180px;
         height: 180px;
-        border-width: 4px;
-    }
-
-    .pulse-effect {
-        border: 2px solid var(--color-primario);
-    }
-
-    .container-mensaje {
-        min-height: auto;
-        padding: 0;
-        justify-content: flex-start;
-    }
-
-    .mensaje-amor {
-        padding: 1.2rem 0.8rem;
-        margin: 0.5rem;
-        width: calc(100% - 1rem);
-        max-width: 100%;
-        border-radius: 12px;
-        border: 1px solid var(--color-primario-claro);
     }
 
     .titulo-mensaje {
-        font-size: 1.2rem;
-        margin-bottom: 0.8rem;
-        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
     }
 
     .texto-mensaje p {
         font-size: 0.9rem;
-        line-height: 1.4;
-        margin-bottom: 0.6rem;
-        text-align: left;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .mensaje-amor {
+        padding: 1.5rem 1rem;
+        margin: 0 0.5rem;
+        width: calc(100% - 1rem);
+        border-radius: 15px;
     }
 
     .firma {
-        font-size: 0.9rem;
-        margin-top: 1rem;
-        text-align: right;
-    }
-
-    .texto-indicacion {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
     }
 
     .tulipan {
-        font-size: 1.2rem;
-        opacity: 0.5;
+        font-size: 1.3rem;
+        opacity: 0.6;
     }
 
-    .tulipanes-borde {
-        opacity: 0.6;
+    .container-mensaje {
+        min-height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 }
