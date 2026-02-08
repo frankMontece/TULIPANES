@@ -1,0 +1,342 @@
+/* ========================================
+   ESTILOS GLOBALES Y RESET
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta de colores romántica */
+    --color-primario: #ff6b9d;
+    --color-secundario: #ffc2d1;
+    --color-fondo: #fff5f7;
+    --color-texto: #2c2c2c;
+    --color-blanco: #ffffff;
+    --sombra-suave: 0 10px 30px rgba(255, 107, 157, 0.2);
+    
+    /* Tipografía */
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background: linear-gradient(135deg, #ffeef3 0%, #ffe4ec 100%);
+    overflow: hidden;
+    height: 100vh;
+    color: var(--color-texto);
+}
+
+/* ========================================
+   FRAMES (PANTALLAS)
+   ======================================== */
+.frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s;
+}
+
+.frame.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========================================
+   FRAME DE INICIO
+   ======================================== */
+.container-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+}
+
+.imagen-clickeable {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imagen-clickeable:hover {
+    transform: scale(1.05);
+}
+
+.imagen-clickeable img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-primario);
+    box-shadow: var(--sombra-suave);
+}
+
+/* Efecto de pulso alrededor de la imagen */
+.pulse-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--color-primario);
+    animation: pulse 2s infinite;
+    opacity: 0.6;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.15);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+}
+
+.texto-indicacion {
+    font-size: 1.3rem;
+    color: var(--color-primario);
+    font-weight: 600;
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* ========================================
+   FRAME DEL MENSAJE
+   ======================================== */
+.container-mensaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Contenedor del mensaje */
+.mensaje-amor {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 2rem;
+    box-shadow: var(--sombra-suave);
+    backdrop-filter: blur(10px);
+    animation: aparecer 1s ease-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.titulo-mensaje {
+    font-size: 2.2rem;
+    color: var(--color-primario);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.texto-mensaje p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--color-texto);
+    text-align: justify;
+}
+
+.firma {
+    text-align: right;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--color-primario);
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+
+/* ========================================
+   ANIMACIÓN DE TULIPANES EN EL BORDE
+   ======================================== */
+.tulipanes-borde {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.tulipan {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.75;
+    user-select: none;
+    will-change: transform;
+}
+
+/* Animaciones únicas para cada tulipán */
+.tulipan:nth-child(1) { animation: moverTulipan1 15s linear infinite; }
+.tulipan:nth-child(2) { animation: moverTulipan2 18s linear infinite; }
+.tulipan:nth-child(3) { animation: moverTulipan3 20s linear infinite; }
+.tulipan:nth-child(4) { animation: moverTulipan4 17s linear infinite; }
+.tulipan:nth-child(5) { animation: moverTulipan5 19s linear infinite; }
+.tulipan:nth-child(6) { animation: moverTulipan6 16s linear infinite; }
+.tulipan:nth-child(7) { animation: moverTulipan7 21s linear infinite; }
+.tulipan:nth-child(8) { animation: moverTulipan8 18s linear infinite; }
+.tulipan:nth-child(9) { animation: moverTulipan9 22s linear infinite; }
+.tulipan:nth-child(10) { animation: moverTulipan10 17s linear infinite; }
+
+/* Animaciones de movimiento */
+@keyframes moverTulipan1 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(50px, -40px) rotate(45deg); }
+    50% { transform: translate(30px, 80px) rotate(90deg); }
+    75% { transform: translate(-60px, 40px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes moverTulipan2 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-40px, 50px) rotate(45deg); }
+    50% { transform: translate(70px, 30px) rotate(90deg); }
+    75% { transform: translate(40px, -60px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes moverTulipan3 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(60px, 20px) rotate(45deg); }
+    50% { transform: translate(-30px, 70px) rotate(90deg); }
+    75% { transform: translate(-50px, -40px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes moverTulipan4 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-60px, -30px) rotate(45deg); }
+    50% { transform: translate(40px, -50px) rotate(90deg); }
+    75% { transform: translate(50px, 60px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes moverTulipan5 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(45px, 35px) rotate(45deg); }
+    50% { transform: translate(-60px, -20px) rotate(90deg); }
+    75% { transform: translate(30px, 50px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes moverTulipan6 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-50px, 40px) rotate(45deg); }
+    50% { transform: translate(50px, 60px) rotate(90deg); }
+    75% { transform: translate(-40px, -50px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes moverTulipan7 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(55px, -45px) rotate(45deg); }
+    50% { transform: translate(-45px, 50px) rotate(90deg); }
+    75% { transform: translate(60px, -30px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes moverTulipan8 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-35px, -55px) rotate(45deg); }
+    50% { transform: translate(65px, 35px) rotate(90deg); }
+    75% { transform: translate(-60px, 45px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes moverTulipan9 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(40px, 50px) rotate(45deg); }
+    50% { transform: translate(-50px, -40px) rotate(90deg); }
+    75% { transform: translate(45px, 35px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes moverTulipan10 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-45px, 35px) rotate(45deg); }
+    50% { transform: translate(55px, -50px) rotate(90deg); }
+    75% { transform: translate(-50px, -35px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .imagen-clickeable img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .titulo-mensaje {
+        font-size: 1.8rem;
+    }
+
+    .texto-mensaje p {
+        font-size: 1rem;
+    }
+
+    .mensaje-amor {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+
+    .tulipan {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .imagen-clickeable img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .titulo-mensaje {
+        font-size: 1.5rem;
+    }
+
+    .texto-mensaje p {
+        font-size: 0.95rem;
+    }
+
+    .tulipan {
+        font-size: 1.5rem;
+    }
+}

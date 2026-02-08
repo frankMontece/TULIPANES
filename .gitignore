@@ -12,15 +12,22 @@ Thumbs.db
 # Archivos de Vercel
 .vercel
 
-# Archivos de Node (si decides usar npm en el futuro)
+# Node y npm
 node_modules/
 package-lock.json
+npm-debug.log
+yarn-error.log
+
+# Archivos de build y dist
+dist/
+build/
 
 # Archivos temporales
 *.log
 *.tmp
 .cache/
 
-# Archivos personales grandes (descoméntalos si son muy pesados)
-# media/video-amor.mp4
-# assets/images/foto-inicial.jpg
+# Variables de entorno
+.env
+.env.local
+.env.*.local
