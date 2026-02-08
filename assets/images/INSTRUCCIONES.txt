@@ -1,0 +1,19 @@
+# Imagen de Inicio
+
+## Instrucciones
+
+Coloca aquí tu imagen personalizada con el nombre: **foto-inicial.jpg**
+
+### Especificaciones recomendadas:
+- Formato: JPG o PNG
+- Tamaño: 500x500px (cuadrada para mejor visualización)
+- Peso: Menos de 2MB
+- La imagen se mostrará en forma circular
+
+### ¿Cómo añadir tu imagen?
+
+1. Guarda tu foto como `foto-inicial.jpg`
+2. Colócala en esta carpeta: `assets/images/`
+3. Reemplaza este archivo de texto
+
+¡Tu imagen aparecerá en la pantalla de inicio del obsequio! 💕

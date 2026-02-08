@@ -1,0 +1,37 @@
+# Archivos de Media
+
+## ACTUALIZADO: Ahora requiere archivo MP3 (No video)
+
+Coloca aquí tu archivo de música personalizado con el nombre: **musica-amor.mp3**
+
+### Especificaciones recomendadas:
+- Formato: MP3 (máxima compatibilidad con navegadores)
+- Duración: 2-5 minutos (se reproducirá en loop infinito)
+- Bitrate: 128 kbps o superior (buena calidad)
+- Peso: Menos de 5MB (Vercel tiene límite de 100MB por proyecto)
+
+### ¿Cómo añadir tu música?
+
+1. Convierte tu audio a formato MP3 si no lo está
+2. Guárdalo como `musica-amor.mp3`
+3. Colócalo en esta carpeta: `media/`
+4. Elimina este archivo de texto
+
+### Consejos:
+
+- La música se reproducirá automáticamente al entrar al frame del mensaje
+- Si el navegador bloquea autoplay, aparecerá un botón para reproducir manualmente
+- Elige una música romántica y suave que complemente el mensaje
+
+### Herramientas para convertir/comprimir audio:
+
+- Online: https://convertio.co/es/mp3-converter/
+- Online: https://www.freeconvert.com/audio-converter
+- Software: Audacity (gratuito)
+
+### Compatibilidad:
+✅ Chrome, Firefox, Safari, Edge
+✅ Funciona en dispositivos móviles
+✅ Compatible con Vercel
+
+¡Tu video aparecerá como fondo romántico del mensaje! 🎥💕

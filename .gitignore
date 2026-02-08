@@ -1,0 +1,26 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de Vercel
+.vercel
+
+# Archivos de Node (si decides usar npm en el futuro)
+node_modules/
+package-lock.json
+
+# Archivos temporales
+*.log
+*.tmp
+.cache/
+
+# Archivos personales grandes (descoméntalos si son muy pesados)
+# media/video-amor.mp4
+# assets/images/foto-inicial.jpg
